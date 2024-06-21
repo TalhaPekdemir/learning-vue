@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class Style Binding</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <!-- vue instance tarafından kontrol etmek amaçlı koşula bağlı class ekleme butonları-->
+      <button @click="addBorder = !addBorder">Border Toggle</button>
+      {{ addBorder }}
+      <button @click="bgRed = !bgRed">Red Toggle</button>
+      {{ bgRed }}
+
+      <br />
+      <!-- elle giriş yapmak için bir input -->
+      <input type="text" v-model="inputColor" />
+      {{inputColor}}
+
+      <!-- array olarak verilebilir. Stiller style.css üzerinden geliyor. -->
+      <!-- <div class="box" :class="['red', 'border']"></div> -->
+
+      <!-- Vue comprehension ile de true/false bakılıp renderlanıyor -->
+      <!-- <div class="box" :class="{border: addBorder, red: bgRed}"></div> -->
+
+      <!-- best practice -->
+      <div
+        class="box"
+        :class="boxClasses"
+        :style="{backgroundColor: inputColor}"
+      ></div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

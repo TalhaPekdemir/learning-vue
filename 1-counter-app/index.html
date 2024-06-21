@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <p style="color: red;">{{ specialText }}</p>
+        <div class="box">
+            <p>{{ counter1 }}</p>
+            <button @click="counter1++">+</button>
+            <button @click="counter1--">-</button>
+        <!-- 
+            computed içinde çağırılan metot gibi kullanılan eleman
+            artık metot gibi değil prop gibi kullanılır. Yoksa hata 
+        -->
+            <p>{{ checkCounter1 }}</p>
+        </div>
+
+        <div class="box">
+            <p>{{ counter2 }}</p>
+            <button @click="counter2++">+</button>
+            <button @click="counter2--">-</button>
+        <!-- 
+            aynı şekilde 
+        -->
+            <p>{{ checkCounter2 }}</p>
+        </div>
+    </div>
+    
+    
+    <script src="app.js"></script>
+</body>
+</html>

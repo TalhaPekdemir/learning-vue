@@ -1,0 +1,33 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #777777;
+
+}
+
+.border{
+    border: 10px dashed black;
+}
+
+.red{
+    background-color: red;
+}
+
+.green{
+    background-color: green;
+}
+
+.blue{
+    background-color: blue;
+}
